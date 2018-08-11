@@ -1,23 +1,22 @@
 <div class="container-fluid">
-  <form>
+  <form #formQuote = 'ngForm' (ngSubmit)='submitQuote()'>
       <div class="form-group">
           <label for="author">QUOTE</label>
-          <textarea type="text" class="form-control" row=4></textarea>
+          <textarea type="text" class="form-control" row=4 [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel"></textarea>
         </div>
     <div class="form-group">
       <label for="author">AUTHOR</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel">
     </div>
     <div class="form-group">
         <label for="author">POSTED BY</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" [(ngModel)]="newQuote.personPosted" name="personPosted" #personPosted="ngModel">
       </div>
     <div class="form-group">
         <label for="postDate">POST DATE</label>
-        <input type='date'
-        id="complete">
+        <input type='date' [(ngModel)]="newQuote.datePosted" name="datePosted" #datePosted="ngModel">
     </div>
-    <button type="submit" class="btn btn-primary">POST</button>
+    <button type="Submit" class="btn btn-primary">POST</button>
 
   </form>
 </div>

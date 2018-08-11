@@ -7,7 +7,7 @@ export class Quote {
     public personPosted: string,
     public upVote: number,
     public downVote: number,
-    public datePosted: Date) {
+    public   datePosted: Date) {
     this.showDetails =  false;
   }
 

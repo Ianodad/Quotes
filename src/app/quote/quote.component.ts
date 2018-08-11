@@ -37,6 +37,13 @@ downVote(index) {
   console.log(this.quotes[index].downVote );
 
 }
+
+addNewQuote(quote) {
+  let quoteLength = this.quotes.length;
+  quote.id = quoteLength + 1;
+  quote.postDate = new Date( quote.postDate);
+  this.quotes.push(quote);
+}
   constructor() { }
 
   // ngOnInit() {
