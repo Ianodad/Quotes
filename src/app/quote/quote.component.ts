@@ -9,9 +9,9 @@ export class QuoteComponent {
 
 
   quotes = [
-    new Quote(1, 'According to your faith be it done to you', 'Jesus', 'Matthew', new Date(-40, 3, 14)),
-    new Quote(1, 'Aspire to inspire before we expire.', 'Unknown', 'Steve', new Date(2018, 6, 4)),
-    new Quote(1, 'Everything you can imagine is real.', 'Pablo Picasso', 'Tom', new Date(2018, 6, 4))
+    new Quote(1, 'Come to me, all you who are weary and burdened, and I will give you rest.', 'Jesus', 'Matthew', 0, 0, new Date(-40, 3, 14)),
+    new Quote(1, 'Aspire to inspire before we expire.', 'Unknown', 'Steve', 0, 0, new Date(2018, 6, 4)),
+    new Quote(1, 'Everything you can imagine is real.', 'Pablo Picasso', 'Tom', 0, 0, new Date(2018, 6, 4))
         ];
 
 
@@ -26,6 +26,16 @@ export class QuoteComponent {
   }
   toogleDetails(index ) {
   this.quotes[index].showDetails = !this.quotes[index].showDetails;
+}
+  upVote(index) {
+    this.quotes[index].upVote = this.quotes[index].upVote + 1;
+    console.log(this.quotes[index].upVote );
+
+}
+downVote(index) {
+  this.quotes[index].downVote = this.quotes[index].downVote + 1;
+  console.log(this.quotes[index].downVote );
+
 }
   constructor() { }
 

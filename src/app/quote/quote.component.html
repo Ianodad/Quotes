@@ -5,8 +5,14 @@
     </div>
     <div class="col-md-6 border border-top-0 border-right-0 border-primary">
         <div class="card mb-5" *ngFor= 'let quote of quotes ;let i = index'>
-            <div class="card-body">{{quote.quote}}</div>
-            <div class="card-body" (click)='toogleDetails(i)' >More Details</div>
+            <div class="card-body">"{{quote.quote}}"</div>
+            <div class="info">
+              <div class="card-body float-left" (click)='toogleDetails(i)'>More Details</div>
+              <div class="vote float-right">
+                <div class="upvote float-left mr-2" (click)='upVote(i)'>UPVOTE</div>
+                <div class="downvote float-right mr-2" (click)='downVote(i)'>DOWNVOTE</div>
+              </div>
+            </div>
 
             <div class="card-footer">
                 <app-quote-details *ngIf="quote.showDetails" [quote]= 'quote' (isComplete)='quoteDelete($event,i)' ></app-quote-details>

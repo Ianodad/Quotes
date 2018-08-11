@@ -2,5 +2,7 @@
   <p>AUTHOR: {{ quote.author}}</p>
   <p>PERSON POSTED: {{quote.personPosted}}</p>
   <p>DATE POSTED: {{quote.datePosted | date : "mediumDate"}}</p>
+  <p>UPVOTE: {{quote.upVote}}</p>
+  <p>UPVOTE: {{quote.downVote}}</p>
   <button type="button" class="btn btn-outline-danger" (click) = 'deleteQuote(true)' >Danger</button>
 </div>
