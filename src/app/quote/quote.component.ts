@@ -5,7 +5,7 @@ import { Quote} from '../quote';
   templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.css']
 })
-export class QuoteComponent implements OnInit {
+export class QuoteComponent {
 
 
   quotes = [
@@ -15,7 +15,7 @@ export class QuoteComponent implements OnInit {
         ];
 
 
-        quoteDelete(isComplete, index) {
+    quoteDelete(isComplete, index) {
     if (isComplete) {
       const toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].author}`);
 
@@ -24,9 +24,12 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  toogleDetails(index ) {
+  this.quotes[index].showDetails = !this.quotes[index].showDetails;
+}
   constructor() { }
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
 
 }

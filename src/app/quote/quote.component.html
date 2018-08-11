@@ -6,9 +6,10 @@
     <div class="col-md-6 border border-top-0 border-right-0 border-primary">
         <div class="card mb-5" *ngFor= 'let quote of quotes ;let i = index'>
             <div class="card-body">{{quote.quote}}</div>
+            <div class="card-body" (click)='toogleDetails(i)' >More Details</div>
 
             <div class="card-footer">
-                <app-quote-details [quote]= 'quote' (isComplete)='quoteDelete($event,i)' ></app-quote-details>
+                <app-quote-details *ngIf="quote.showDetails" [quote]= 'quote' (isComplete)='quoteDelete($event,i)' ></app-quote-details>
             </div>
 
         </div>
