@@ -76,6 +76,7 @@
             ],
             "scripts": [],
             "assets": [
+              "../node_modules/font-awesome/css/font-awesome.min.css",
               "src/favicon.ico",
               "src/assets"
             ]

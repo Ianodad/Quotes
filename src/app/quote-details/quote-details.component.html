@@ -1,8 +1,8 @@
 <div>
   <p>AUTHOR: {{ quote.author}}</p>
   <p>PERSON POSTED: {{quote.personPosted}}</p>
-  <p>DATE POSTED: {{quote.datePosted | date : "mediumDate"}}</p>
+  <p>DATE POSTED: {{quote.datePosted | dateCount }}</p>
   <p>UPVOTE: {{quote.upVote}}</p>
   <p>UPVOTE: {{quote.downVote}}</p>
-  <button type="button" class="btn btn-outline-danger" (click) = 'deleteQuote(true)' >Danger</button>
+  <button type="button" class="btn btn-outline-danger" (click) = 'deleteQuote(true)' >DELETE QUOTE</button>
 </div>

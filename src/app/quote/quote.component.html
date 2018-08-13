@@ -4,22 +4,31 @@
         <app-form-quote (addQuote)='addNewQuote($event)'></app-form-quote>
     </div>
     <div class="col-md-6 border border-top-0 border-right-0 border-primary">
-        <div class="card mb-5" *ngFor= 'let quote of quotes ;let i = index'>
-            <div class="card-body">"{{quote.quote}}"</div>
+      <div *ngFor= 'let quote of quotes ;let i = index'>
+        <div class="card mb-5 w-50 d-flex flex-nowrap" appSelected ='quote.quoteHighlight' >
+            <div class="card-body" >
+              <p class="text-center mainQuote">"{{quote.quote}}"</p>
+              <i class="far fa-grin"></i>
+            </div>
             <div class="info">
-              <div class="card-body float-left" (click)='toogleDetails(i)'>More Details</div>
-              <div class="vote float-right">
-                <div class="upvote float-left mr-2" (click)='upVote(i)'>UPVOTE</div>
-                <div class="downvote float-right mr-2" (click)='downVote(i)'>DOWNVOTE</div>
+              <div class="card-body">
+                <p class="float-left" (click)='toogleDetails(i)' appUnderline>More Details</p>
+                <div class="vote float-right">
+                    <div class="upvote float-left mr-2 glyphicon glyphicon-circle-arrow-up" >
+                      <button type="button" class="btn btn-success" (click)='upVote(i)'>UPVOTE</button>
+                    </div>
+                    <div class="downvote float-right mr-2">
+                      <button type="button" class="btn btn-danger" (click)='downVote(i)'>DOWNVOTE</button>
+                    </div>
+                </div>
               </div>
+              <div>
             </div>
-
             <div class="card-footer">
-                <app-quote-details *ngIf="quote.showDetails" [quote]= 'quote' (isComplete)='quoteDelete($event,i)' ></app-quote-details>
+                <app-quote-details *ngIf='quote.showDetails' [quote]= 'quote' (isComplete)='quoteDelete($event,i)' ></app-quote-details>
             </div>
-
+          </div>
         </div>
-
     </div>
   </div>
 </div>

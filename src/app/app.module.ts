@@ -4,13 +4,23 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FormQuoteComponent } from './form-quote/form-quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+import { DateCountPipe } from './date-count.pipe';
+import { MenuComponent } from './menu/menu.component';
+import { UnderlineDirective } from './underline.directive';
+import { SelectedDirective } from './selected.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     FormQuoteComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    DateCountPipe,
+    MenuComponent,
+    UnderlineDirective,
+    SelectedDirective,
+
 
   ],
   imports: [
