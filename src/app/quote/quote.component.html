@@ -5,14 +5,13 @@
     </div>
     <div class="col-md-6 border border-top-0 border-right-0 border-primary">
       <div *ngFor= 'let quote of quotes ;let i = index'>
-        <div class="card mb-5 w-50 d-flex flex-nowrap" appSelected ='quote.quoteHighlight' >
+        <div class="card mb-5 w-50 d-flex flex-nowrap" appSelected = 'quoteHighlight'>
             <div class="card-body" >
               <p class="text-center mainQuote">"{{quote.quote}}"</p>
-              <i class="far fa-grin"></i>
             </div>
             <div class="info">
               <div class="card-body">
-                <p class="float-left" (click)='toogleDetails(i)' appUnderline>More Details</p>
+                <p class="float-left" (click)='toogleDetails(i)' appUnderline><i class="fas fa-angle-double-down"></i>More Details</p>
                 <div class="vote float-right">
                     <div class="upvote float-left mr-2 glyphicon glyphicon-circle-arrow-up" >
                       <button type="button" class="btn btn-success" (click)='upVote(i)'>UPVOTE</button>
