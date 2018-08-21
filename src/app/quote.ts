@@ -1,8 +1,6 @@
 export class Quote {
   public showDetails: boolean;
-  public quoteHighlight: boolean;
-  public holder: number;
-  // public state: string;
+  public quoteHighlight: boolean;  // public state: string;
   constructor(
     public id: number,
     public quote: string,
@@ -14,6 +12,5 @@ export class Quote {
   ) {
     this.showDetails = false;
     this.quoteHighlight = true;
-    this.holder = 0;
   }
 }
