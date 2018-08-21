@@ -1,22 +1,18 @@
 .app-comp {
   background-color: #00327F;
-
+  background-image: url('../assets/img/books.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.quote-h{
+
+.quote-h {
   color: aliceblue;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+  font-family: 'Engagement', cursive;
 }
-.tag-line{
+
+.tag-line {
   color: aliceblue;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-.main-header{
-  background-image:
 }
 
-.main-header{
-  background-color: black;
-  height: 200px;
-}
+.main-header {}

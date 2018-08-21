@@ -1,18 +1,29 @@
-.card-body{
-  background-color: #4C92FF;
+.card-body {
+  /* background-color: #4C92FF; */
+  opacity: 0.5;
 }
-.card-footer{
-  background-color: #0064FF;
-}
-.fas{
 
+.card-footer {
+  background-color: #ffffff;
+  opacity: 0.6;
 }
+
+.fas {}
+
 .fa-thumbs-up {
-  color: black;
-  size: 25px;
-
+  color: green;
+  size: 3em;
 }
 
-.fa-angle-double-down{
+.qoutes {
+  width: 30em
+}
+
+.fa-angle-double-down {
   size: 4em;
+}
+
+.mainQuote {
+  font-size: 1.3em;
+  font-family: 'Kite One', sans-serif;
 }

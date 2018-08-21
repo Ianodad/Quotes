@@ -1,33 +1,37 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6">
-        <app-form-quote (addQuote)='addNewQuote($event)'></app-form-quote>
+<div class="container d-flex justify-content-center border">
+  <div class="d-flex flex-column  ">
+    <div class="form">
+      <app-form-quote (addQuote)='addNewQuote($event)'></app-form-quote>
     </div>
-    <div class="col-md-6 border border-top-0 border-right-0 border-primary">
-      <div *ngFor= 'let quote of quotes ;let i = index'>
-        <div class="card mb-5 w-50 d-flex flex-nowrap" appSelected = 'quoteHighlight'>
-            <div class="card-body" >
-              <p class="text-center mainQuote">"{{quote.quote}}"</p>
-            </div>
-            <div class="info">
-              <div class="card-body">
-                <p class="float-left" (click)='toogleDetails(i)' appUnderline><i class="fas fa-angle-double-down"></i>More Details</p>
-                <div class="vote float-right">
-                    <div class="upvote float-left mr-2 glyphicon glyphicon-circle-arrow-up" >
-                      <button type="button" class="btn btn-success" (click)='upVote(i)'>UPVOTE</button>
-                    </div>
-                    <div class="downvote float-right mr-2">
-                      <button type="button" class="btn btn-danger" (click)='downVote(i)'>DOWNVOTE</button>
-                    </div>
+    <div class="qoutes">
+      <div *ngFor='let quote of quotes ;let i = index'>
+        <div class=" border card mb-5  d-flex" appSelected='quoteHighlight'>
+          <div class="card-body">
+            <p class="text-center mainQuote">"{{quote.quote}}"</p>
+          </div>
+          <div class="info">
+            <div class="card-body">
+              <p class="float-left" (click)='toogleDetails(i)' appUnderline>
+                <i class="fas fa-angle-double-down"></i>More Details</p>
+              <div class="vote float-right">
+                <div class="upvote float-left mr-4">
+                  <i class="far fa-thumbs-up fa-3x" (click)='upVote(i)'></i>
+                  <!-- <button type="button" class="btn btn-success">UPVOTE</button> -->
+                </div>
+                <div class="downvote float-right mr-2">
+                  <i class="far fa-thumbs-down fa-3x " (click)='downVote(i)'></i>
+                  <!-- <button type="button" class="btn btn-danger" (click)='downVote(i)'>DOWNVOTE</button> -->
                 </div>
               </div>
-              <div>
             </div>
-            <div class="card-footer">
-                <app-quote-details *ngIf='quote.showDetails' [quote]= 'quote' (isComplete)='quoteDelete($event,i)' ></app-quote-details>
+            <div>
+            </div>
+            <div class="card-body">
+              <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete)='quoteDelete($event,i)'></app-quote-details>
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </div>

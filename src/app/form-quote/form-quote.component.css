@@ -2,11 +2,17 @@
   border-bottom: 2px solid red;
   border-radius: 4px;
 } */
-label{
+
+label {
   color: aliceblue;
+  font-family: 'Oleo Script', cursive;
+  font-size: 1.4em;
 }
+
 input {
-  border-bottom:1px solid #757575;
+  border-bottom: 1px solid #757575;
+}
 
-
+form {
+  width: 30em;
 }

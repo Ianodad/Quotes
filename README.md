@@ -13,7 +13,7 @@ This a  very straight forward application that prompts a user to be able to  Inp
 | Number of likes | Press Downvote or Upvote     |    adds to the downvote or upvote |
 
 ## Preview
-**[Click here](https://)** to see the live site.
+**[Click here](https://ianodad.github.io/Quotes/)** to see the live site.
 
 ## Known Bugs
 No bugs so far. If found
