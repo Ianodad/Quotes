@@ -32,6 +32,8 @@ import {
 })
 export class QuoteComponent {
   state: any = 'small';
+  condition: boolean;
+  
   quotes = [
     new Quote(
       1,

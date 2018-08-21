@@ -1,25 +1,27 @@
-import { Directive, Input, ElementRef } from '@angular/core';
-import { format } from 'util';
+import {
+  Directive,
+  Input,
+  TemplateRef,
+  ElementRef,
+  ViewContainerRef
+} from '@angular/core';
 
 @Directive({
   selector: '[appSelected]'
 })
 export class SelectedDirective {
+  constructor(
+    private viewContainer: ViewContainerRef,
+    private elem: ElementRef
+  ) {}
 
-  constructor(private elem: ElementRef) {
-    /// DIRECT CUSTOM////////////////////////////
-    // this.elem.nativeElement.style.borderColor = 'red ';
-  /// DIRECT CUSTOM////////////////////////////
-  }
   @Input()
-  set appSelected(val) {
-    if (val) {
+  set appSelected(condition: boolean) {
+    if (condition) {
       this.elem.nativeElement.style.borderColor = 'red ';
     } else {
-      this.elem.nativeElement.clear();
+      this.viewContainer.clear();
     }
-
   }
-
-
 }
+// this.elem.nativeElement.style.borderColor = 'red ';
