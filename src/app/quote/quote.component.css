@@ -11,8 +11,20 @@
 .fas {}
 
 .fa-thumbs-up {
-  color: green;
+  color: #044C29;
   size: 3em;
+}
+
+.fa-thumbs-up:hover {
+  color: #97ED8A;
+}
+
+.fa-thumbs-down {
+  color: #CC0000;
+}
+
+.fa-thumbs-down:hover {
+  color: #FF4C4C;
 }
 
 .qoutes {
@@ -26,4 +38,17 @@
 .mainQuote {
   font-size: 1.3em;
   font-family: 'Kite One', sans-serif;
+}
+
+.card {
+  color: gold;
+  background-color: black;
+  opacity: 0.4;
+  border: none;
+}
+
+.card-body {
+  color: white;
+  background-color: none;
+  opacity: 1;
 }

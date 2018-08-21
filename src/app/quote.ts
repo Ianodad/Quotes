@@ -2,6 +2,7 @@ export class Quote {
   public showDetails: boolean;
   public quoteHighlight: boolean;
   public holder: number;
+  // public state: string;
   constructor(
     public id: number,
     public quote: string,
@@ -9,10 +10,10 @@ export class Quote {
     public personPosted: string,
     public upVote: number,
     public downVote: number,
-    public   datePosted: Date) {
-    this.showDetails =  false;
+    public datePosted: Date
+  ) {
+    this.showDetails = false;
     this.quoteHighlight = true;
     this.holder = 0;
   }
-
 }

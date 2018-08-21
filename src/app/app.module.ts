@@ -4,11 +4,12 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FormQuoteComponent } from './form-quote/form-quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { DateCountPipe } from './date-count.pipe';
 import { MenuComponent } from './menu/menu.component';
 import { UnderlineDirective } from './underline.directive';
 import { SelectedDirective } from './selected.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,16 +20,10 @@ import { SelectedDirective } from './selected.directive';
     DateCountPipe,
     MenuComponent,
     UnderlineDirective,
-    SelectedDirective,
-
-
+    SelectedDirective
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-
-  ],
+  imports: [BrowserModule, FormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

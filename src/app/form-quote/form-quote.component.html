@@ -1,22 +1,26 @@
 <div class="container">
-  <form class="" #formQuote='ngForm' (ngSubmit)='submitQuote()'>
+  <form class="pr-4" #formQuote='ngForm' (ngSubmit)='submitQuote()'>
     <div class="form-group">
       <label for="author">ADD QUOTE</label>
-      <textarea type="text" class="form-control" row=4 [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" (click)='toogleForm()'></textarea>
+      <textarea type="text" class="form-control" row=4 [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" [@myanimation]='state'
+        (click)="animateMe()" (click)='toogleForm()'></textarea>
     </div>
     <div class="form-group " *ngIf='showDetails'>
       <label for="author">AUTHOR</label>
-      <input type="text" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel">
+      <input type="text" class="form-control" [(ngModel)]="newQuote.author" name="author" #author="ngModel" [@myanimation]='state'
+        (click)="animateMe()">
     </div>
     <div class="form-group" *ngIf='showDetails'>
       <label for="author">POSTED BY</label>
-      <input type="text" class="form-control" [(ngModel)]="newQuote.personPosted" name="personPosted" #personPosted="ngModel">
+      <input type="text" class="form-control" [(ngModel)]="newQuote.personPosted" name="personPosted" #personPosted="ngModel" [@myanimation]='state'
+        (click)="animateMe()">
     </div>
     <div class="form-group" *ngIf='showDetails'>
       <label for="postDate">POST DATE</label>
-      <input class="ml-3" type='date' [(ngModel)]="newQuote.datePosted" name="datePosted" #datePosted="ngModel">
+      <input class="ml-3" type='date' [(ngModel)]="newQuote.datePosted" name="datePosted" #datePosted="ngModel" [@myanimation]='state'
+        (click)="animateMe()">
     </div>
-    <button *ngIf='showDetails' type="Submit" class="tn btn-outline-success float-right">POST IT</button>
+    <button *ngIf='showDetails' type="Submit" class="tn btn-outline-success float-right" [@myanimation]='state' (click)="animateMe()">POST IT</button>
 
   </form>
 </div>

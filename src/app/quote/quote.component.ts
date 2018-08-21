@@ -1,11 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+  keyframes
+} from '@angular/animations';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.css']
+  styleUrls: ['./quote.component.css'],
+  animations: [
+    trigger('myanimation', [
+      state(
+        'small',
+        style({
+          transform: 'scale(1)'
+        })
+      ),
+      state(
+        'large',
+        style({
+          transform: 'scale(1.2)'
+        })
+      ),
+      transition('small <=>large', animate('300ms ease-in'))
+    ])
+  ]
 })
 export class QuoteComponent {
+  state: any = 'small';
   quotes = [
     new Quote(
       1,
