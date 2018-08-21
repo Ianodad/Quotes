@@ -3,7 +3,7 @@
     <div class="form">
       <app-form-quote (addQuote)='addNewQuote($event)'></app-form-quote>
     </div>
-    <div class="qoutes">
+    <div class="qoutes mt-4">
       <div *ngFor='let quote of quotes ;let i = index'>
         <div class=" border card mb-5  d-flex" appSelected='quoteHighlight'>
           <div class="card-body">

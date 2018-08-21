@@ -20,7 +20,7 @@
       <input class="ml-3" type='date' [(ngModel)]="newQuote.datePosted" name="datePosted" #datePosted="ngModel" [@myanimation]='state'
         (click)="animateMe()">
     </div>
-    <button *ngIf='showDetails' type="Submit" class="tn btn-outline-success float-right" [@myanimation]='state' (click)="animateMe()">POST IT</button>
+    <button *ngIf='showDetails' type="Submit" class="btn btn-outline-warning float-right" [@myanimation]='state' (click)="animateMe()">POST IT</button>
 
   </form>
 </div>
