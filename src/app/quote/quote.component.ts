@@ -91,19 +91,4 @@ export class QuoteComponent {
     quote.postDate = new Date(quote.postDate);
     this.quotes.unshift(quote);
   }
-
-  // this method check for a UpVote to see which is the highest
-  // highlighted(index) {
-  // if (this.quotes[index].quoteHighlight = false) {
-  //   if (this.quotes[index].upVote > this.quotes[index].holder) {
-  //     let newUpVote = this.quotes[index].upVote;
-  //     this.quotes[index].holder = newUpVote;
-  //     this.quotes[index].quoteHighlight = true;
-  //   }
-  // }
-  // }
 }
-// constructor() { }
-
-// ngOnInit() {
-// }

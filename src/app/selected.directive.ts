@@ -21,18 +21,5 @@ export class SelectedDirective {
 
   }
 
-  // }
-///// INPUT FROM THE VIEW USING A PROPERTY VARIABLE//////
-  // @Input() set appSelected(hight: boolean) {
-  //   if (hight) {
-  //     this.elem.nativeElement.style.borderColor = 'red ';
-  //   } else {
-  //    this.elem.nativeElement.clear();
-
-  //   }
-  // }
-///// END PROPERTY VARIABLE//////
-
-
 
 }
